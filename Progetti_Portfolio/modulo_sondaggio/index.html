@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primo test</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="titolo">Modulo di sondaggio Lorem ipsum dolar</h1>
+      <p id="descrizione">
+        Grazie per aver dedicato del tempo per aiutarci a migliorare la
+        piattaforma
+      </p>
+    </header>
+
+    <form id="form-sondaggio">
+      <div class="gruppi-form">
+        <label for="nome" id="label-nome">Nome</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Inserisci il tuo nome"
+          required
+        />
+      </div>
+
+      <div class="gruppi-form">
+        <label for="email" id="label-email">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="inserisci il tuo indirizzo email"
+          required
+        />
+      </div>
+
+      <div class="gruppi-form">
+        <label id="label-età" for="number">Età <span>(opzionale)</span></label>
+        <input
+          type="number"
+          min="10"
+          max="100"
+          id="età"
+          name="età"
+          placeholder="Inserire età"
+        />
+      </div>
+
+      <div class="gruppi-form">
+        <label for="dropdown"
+          >Quale opzione descrive meglio il tuo ruolo attuale?</label
+        >
+        <select id="dropdown" name="dropdown">
+          <option value="">Seleziona ruolo attuale</option>
+          <option value="studente">Studente</option>
+          <option value="impiegato">Impiegato</option>
+          <option value="altro">Altro</option>
+        </select>
+      </div>
+
+      <section>
+        <p>Tipologia preferita?</p>
+        <div class="gruppi-form">
+          <input type="radio" id="anime" name="genere" value="anime" checked />
+          <label for="anime">Anime</label>
+        </div>
+
+        <div class="gruppi-form">
+          <input type="radio" id="film" name="genere" value="film" />
+          <label for="film">Film</label>
+        </div>
+
+        <div class="gruppi-form">
+          <input type="radio" id="serie" name="genere" value="serie" />
+          <label for="serie">Serie TV</label>
+        </div>
+      </section>
+
+      <section>
+        <p>Cosa ti piace fare?</p>
+        <div class="gruppi-form">
+          <input type="checkbox" id="giocare" name="giocare" value="giocare" />
+          <label for="giocare">Giocare</label>
+        </div>
+
+        <div class="gruppi-form">
+          <input type="checkbox" id="suonare" name="suonare" value="suonare" />
+          <label for="suonare">Suonare</label>
+        </div>
+
+        <div class="gruppi-form">
+          <input type="checkbox" id="cantare" name="cantare" value="cantare" />
+          <label for="cantare">Cantare</label>
+        </div>
+
+        <div class="gruppi-form">
+          <input
+            type="checkbox"
+            id="combattere"
+            name="combattere"
+            value="combattere"
+          />
+          <label for="combattere">Combattere</label>
+        </div>
+
+        <div class="gruppi-form">
+          <input type="checkbox" id="correre" name="correre" value="correre" />
+          <label for="correre">Correre</label>
+        </div>
+      </section>
+
+      <div class="gruppi-form">
+        <label for="commenti">Commenti aggiuntivi?</label>
+        <textarea
+          id="commenti"
+          name="commenti"
+          rows="4"
+          cols="60"
+          placeholder="Inserisci qui i tuoi commenti..."
+        ></textarea>
+      </div>
+      <div class="gruppi-form">
+        <button type="submit" id="invio">Invia</button>
+      </div>
+    </form>
+  </body>
+</html>

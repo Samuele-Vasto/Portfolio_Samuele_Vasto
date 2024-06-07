@@ -1,0 +1,160 @@
+:root {
+  --font-bold: "Poppins", sans-serif;
+  --font-normal: "Poppins", sans-serif;
+  --font-18px: 18px;
+  --font-16px: 16px;
+  --font-media: 0.8rem;
+  --color-scritte-1: #f3f3f3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+header {
+  text-align: center;
+
+  & #titolo {
+    font-family: var(--font-bold);
+    font-size: 32px;
+    font-weight: 400;
+    margin: 50px 130px 0px 130px;
+    line-height: 40px;
+  }
+
+  & #descrizione {
+    font-family: var(--font-normal);
+    font-size: var(--font-18px);
+    color: var(--color-scritte-1);
+    font-style: italic;
+    margin: 10px 90px 30px 90px;
+  }
+}
+
+#form-sondaggio {
+  background-color: #20203bda;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 2.5rem;
+  border-radius: 4px;
+  font-family: var(--font-bold);
+
+  & .gruppi-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.125rem;
+    padding: 6px;
+
+    & label {
+      margin-bottom: 8px;
+      color: var(--color-scritte-1);
+
+      & span {
+        font-size: 14px;
+      }
+    }
+
+    & input {
+      padding: 6px 10px 6px 12px;
+      margin-bottom: 10px;
+    }
+
+    & input,
+    select,
+    #commenti {
+      font-size: var(--font-16px);
+      font-family: var(--font-bold);
+      border-radius: 4px;
+      border: none;
+    }
+
+    & select {
+      padding: 6px 10px 6px 12px;
+      color: #757575;
+    }
+  }
+
+  & section p {
+    font-size: var(--font-18px);
+    color: var(--color-scritte-1);
+  }
+
+  & section .gruppi-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: -15px;
+
+    & input {
+      width: 19px;
+    }
+
+    & label {
+      padding-left: 5px;
+    }
+  }
+
+  & #commenti{
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  #invio {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: var(--font-bold);
+    font-size: var(--font-16px);
+    background-color: #37af65;
+    color: var(--color-scritte-1);
+    border: none;
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  header {
+    & #titolo {
+      font-size: 25px;
+    }
+
+    & #descrizione {
+      font-size: 16px;
+      margin-top: 0;
+    }
+  }
+
+  #form-sondaggio {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 28px;
+
+    & .gruppi-form {
+      font-size: 0.9rem;
+
+      & input, select, #commenti {
+        font-size: var(--font-media);
+      }
+
+      & #invio{
+        margin-top: 16px;
+        padding: 9px;
+        font-size: var(--font-media);
+      }
+    }
+  }
+}

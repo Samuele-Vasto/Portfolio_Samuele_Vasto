@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2? family= Outfit & display=swap");
+
+body {
+  margin: 0;
+  background-color: #161616;
+  background-image: url("background-pattern.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #8a8a8a;
+  font-size: 14px;
+  font-family: "Outfit", sans-serif;
+}
+
+/* NAVBAR / HEADER. */
+
+header {
+  border-bottom: solid 1px #9c9c9c39;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: rgb(223, 222, 222);
+}
+
+nav,
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  & a#get-touch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  & a#get-touch:hover {
+    color: rgb(223, 222, 222);
+  }
+
+  & #get-touch span:first-child {
+    background-color: #212121;
+    border: solid 1px #9c9c9c39;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 17px;
+    border-radius: 50%;
+
+    & svg {
+      height: 20px;
+      color: #8a8a8a;
+    }
+  }
+
+  & ul#social-desktop,
+  ul#social-mobile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & li {
+      list-style-type: none;
+    }
+  }
+
+  & ul#social-mobile svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  & ul#social-desktop {
+    display: none;
+  }
+}
+
+/* HERO SECTION. */
+
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* gap: 20px; */
+
+  & span {
+    margin-top: 25px;
+  }
+
+  & img {
+    height: 120px;
+    width: 120px;
+  }
+
+  & h1 {
+    font-size: 50px;
+    margin: 20px 0 35px 0;
+  }
+}
+
+/* trucco per mettere il gradiente sul testo, ricordalo. */
+
+.testo-gradiente {
+  background-image: linear-gradient(45deg, #eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: text;
+}
+
+/* SEZIONE LOGO. */
+
+#logos-section {
+  background-color: #212121;
+  border: solid 1px #9c9c9c39;
+  height: 200px;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  & img {
+    height: 40px;
+  }
+}
+
+/* SEZIONE SERVIZI. */
+
+#servicies-section {
+  padding: 60px 20px;
+  text-align: center;
+
+  & h2 {
+    padding: 0 30px;
+    margin-bottom: 40px;
+  }
+
+  & .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  & .item {
+    background-color: #212121;
+    border: solid 1px #9c9c9c39;
+    padding: 15px;
+
+    & svg {
+      height: 44px;
+    }
+  }
+}
+
+/* SEZIONE CONTATTI. */
+
+a.button {
+  background-color: #212121;
+  border: solid 1px #9c9c9c39;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 17px;
+  border-radius: 5px;
+  gap: 10px;
+  transition: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+
+  & svg {
+    height: 20px;
+  }
+}
+
+a.button:hover {
+  scale: 0.9;
+  color: inherit;
+}
+
+#contact-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px #9c9c9c39;
+  border-left: none;
+  border-right: none;
+  padding: 60px 0;
+
+  & h2 {
+    font-size: 35px;
+    margin-top: 0;
+  }
+}
+
+/* FOOTER. */
+
+footer {
+  align-items: center;
+}
+
+/* LATO DESKTOP. */
+
+@media screen and (min-width: 768px) {
+  nav,
+  footer {
+    & ul#social-mobile {
+      display: none;
+    }
+
+    & ul#social-desktop {
+      display: flex;
+    }
+  }
+
+  header,footer {
+    max-width: 1150px;
+    margin: auto;
+  }
+
+  #servicies-section {
+    & .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      max-width: 1150px;
+      margin: auto;
+    }
+  }
+
+  #contact-section{
+    max-width: 1150px;
+    margin: auto;
+  }
+}
